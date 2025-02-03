@@ -1,0 +1,317 @@
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/users
+Authorization: eyJraWQiOiJVSVwvXC82V1d5TjVhUytwQ0lFK3c4ZXprUnRlWkdwRU9nOWR0eWNCRzRYY2M9IiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiaWVtNmNMX3M3eHlHaXQ5ZmVVM0FiUSIsInN1YiI6ImUwMmMwOWNjLTIwMjEtNzA4Yy0xZmFmLTY1YTY2ZjYzNjgzMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xX3VIY1ZRcTlDZyIsImNvZ25pdG86dXNlcm5hbWUiOiJlMDJjMDljYy0yMDIxLTcwOGMtMWZhZi02NWE2NmY2MzY4MzEiLCJvcmlnaW5fanRpIjoiODAwODQxMjgtZWU3NS00ODk1LWEzZjMtNGRiOTcwOGU4YjBkIiwiYXVkIjoiN2Y0bjBqdmQ1dnAwZzhqaTdwNnBwZTRna2UiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTczNTAzNjA3MCwiZXhwIjoxNzM1MDM5NjcwLCJpYXQiOjE3MzUwMzYwNzAsImp0aSI6IjIzNDY4YjlhLTliMWYtNDQwMS1iMDhlLTU2YWVkZmYzNDBhYiIsImVtYWlsIjoibWFyaGFyeXRheWFybW9saXVrQGdtYWlsLmNvbSJ9.Mt3y1uvkeH5wNWRRmjQBCon-Jt77twtS1XZd6gm0cfDzMICd1r8Y1KMbzfbu6LdHnKJLWzPY8z7xryKtJgCe9jFX8G32UYmUEueaJvMCjz0ITZmsm_ym5C9o18eCQ6V3pIHGt1LdurkvvxLJ0laXGBEvxSd4dh2m-aLvoDy4Rhm25LhueSAIkCr6xCQjMq8D6LWQp71pu-4qERjWK8IVvZlPS3trHqMtSFxYeDsx0W2nGc1iJW0HwTcfyBZ1akHmccVMyzQtuS-Nrq5I905GCdGjyXX_zu3I5ohGyXkU-_hNhzPYDzANr_yXWoWzdVCe3sd0vfatMke7V1NGbxsFbg
+Content-Type: application/json
+
+{
+  "name" : "Bob",
+  "email" : "splinterr@gmail.com",
+  "password" : "2rVnvBmW3cCJzp*",
+  "repeatPassword" : "2rVnvBmW3cCJzp*"
+
+}
+
+###
+GET https://80rme0wtac.execute-api.eu-north-1.amazonaws.com/dev/ping
+
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/categories
+Content-Type: application/json
+
+{
+  "name" : "Community & Local Initiatives"
+}
+
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/contacts
+Content-Type: application/json
+
+{
+  "cover" : "My wish",
+  "email" : "splinter@gmail.com",
+  "description" : "I want to realize my dream"
+}
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events/sync-embeddings
+
+
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events
+Content-Type: application/json
+
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/assistant/query
+Content-Type: application/json
+
+"I want to help animal"
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events/ac4589f5-96ce-4184-b8d7-197f2be37a09
+Content-Type: application/json
+
+
+###
+GET http://localhost:8080/chat?message=who are you?
+
+###
+GET http://localhost:8080/chat?message=I want to help animals
+
+
+###
+GET https://dream-realiser-i0a9ufo.svc.aped-4627-b74a.pinecone.io/vectors/fetch?ids=f1957b90-2370-4023-9a3d-e3b2c95d6218
+
+###
+GET http://localhost:8080/chat?message=I want events by category Education & Mentorship
+
+###
+GET http://localhost:8080/chat?message=I want to help children
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/chat?message=I want to help animals
+
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/assistant/search?query=I+want+help+animals
+
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/categories
+Content-Type: application/json
+
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events
+Content-Type: application/json
+
+{
+  "title": "Test event 2",
+  "description": "A group of teenagers dreams of having a sports field for playing football",
+  "opportunityType": "WISHES",
+  "assistanceType": "DONATION",
+  "categoryId": "8fde5b19-bbc1-4188-b3e0-eb540a9bb644",
+  "location": "Kyiv",
+  "date": "2025-03-25T10:00:00",
+  "duration": 200,
+  "image": "https://dreamrealiserbucket.s3.eu-north-1.amazonaws.com/Tech-Elevator-October-Session-128-min-610x393.jpg",
+  "goal": 18000.00,
+  "currentProgress": 2000.00
+}
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events
+Content-Type: application/json
+
+{
+  "title": "Test Event",
+  "description": "I make the test event",
+  "opportunityType": "WISHES",
+  "assistanceType": "DONATION",
+  "categoryId": "8fde5b19-bbc1-4188-b3e0-eb540a9bb644",
+  "location": "Kyiv",
+  "date": "2025-03-25T10:00:00",
+  "duration": 200,
+  "image": "https://dreamrealiserbucket.s3.eu-north-1.amazonaws.com/Tech-Elevator-October-Session-128-min-610x393.jpg",
+  "goal": 18000.00,
+  "currentProgress": 2000.00,
+  "organizerName": "Community Sports Initiative",
+  "organizerEmail": "info@communitysports.org",
+  "organizerPhone": "+380123456789",
+  "link": "https://example.com/community-sports-field"
+}
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="organizerType"
+
+Individual
+--boundary
+Content-Disposition: form-data; name="organizerName"
+
+Central hospital
+--boundary
+Content-Disposition: form-data; name="organizerEmail"
+
+info@communitymedicine.org
+--boundary
+Content-Disposition: form-data; name="phone"
+
++380123456709
+--boundary
+Content-Disposition: form-data; name="link"
+
+https://www.youtube.com/
+--boundary
+Content-Disposition: form-data; name="title"
+
+Test event 2
+--boundary
+Content-Disposition: form-data; name="categoryId"
+
+b7717f14-944f-4642-bf30-d7c714239cd9
+--boundary
+Content-Disposition: form-data; name="opportunityType"
+
+WISHES
+--boundary
+Content-Disposition: form-data; name="assistanceType"
+
+DONATION
+--boundary
+Content-Disposition: form-data; name="target"
+
+80000
+--boundary
+Content-Disposition: form-data; name="region"
+
+Ukraine
+--boundary
+Content-Disposition: form-data; name="address"
+
+Kyiv street 80
+--boundary
+Content-Disposition: form-data; name="startingDate"
+
+17 september
+--boundary
+Content-Disposition: form-data; name="startHour"
+
+12
+--boundary
+Content-Disposition: form-data; name="startMinute"
+
+30
+--boundary
+Content-Disposition: form-data; name="endingDate"
+
+1 october
+--boundary
+Content-Disposition: form-data; name="endHour"
+
+17
+--boundary
+Content-Disposition: form-data; name="endMinute"
+
+00
+--boundary
+Content-Disposition: form-data; name="timeDemands"
+
+Up to 1 hour
+--boundary
+Content-Disposition: form-data; name="skills"
+
+None
+--boundary
+Content-Disposition: form-data; name="description"
+
+Test event 2
+--boundary
+Content-Disposition: form-data; name="descriptionLink"
+
+https://www.google.co.uk/
+--boundary
+Content-Disposition: form-data; name="currentProgress"
+
+0.0
+--boundary
+Content-Disposition: form-data; name="coverImageFile"; filename="cover.jpg"
+Content-Type: image/jpeg
+
+<content_of_cover_image_file>
+
+--boundary
+Content-Disposition: form-data; name="organizerPhotoFile"; filename="photo.jpg"
+Content-Type: image/jpeg
+
+<content_of_photo_file>
+
+--boundary
+Content-Disposition: form-data; name="documentFile"; filename="document.pdf"
+Content-Type: application/pdf
+
+<content_of_document_file>
+
+--boundary--
+
+###
+
+PUT https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events
+Content-Type: application/json
+
+{
+  "organizerType": "Individual",
+  "organizerName": "Central hospital",
+  "organizerEmail": "info@communitymedicine.org",
+  "phone": "+380123456709",
+  "link": "https://www.youtube.com/",
+  "organizerPhoto": "https://dreamrealiserbucket.s3.eu-north-1.amazonaws.com/bigstock-Mental-Health-Due-To-Psycholog-417713128.jpg",
+  "title": "Test event 2",
+  "categoryId": "b7717f14-944f-4642-bf30-d7c714239cd9",
+  "categoryName": null,
+  "opportunityType": "WISHES",
+  "assistanceType": "DONATION",
+  "target": "80000",
+  "region": "Ukraine",
+  "address": "Kyiv street 80",
+  "startingDate": "17 september",
+  "startHour": "12",
+  "startMinute": "30",
+  "endingDate": "1 october",
+  "endHour": "17",
+  "endMinute": "00",
+  "timeDemands": "Up to 1 hour",
+  "skills": "None",
+  "coverImage": "https://dreamrealiserbucket.s3.eu-north-1.amazonaws.com/bigstock-Mental-Health-Due-To-Psycholog-417713128.jpg",
+  "description": "Test event 2",
+  "descriptionLink": "https://www.google.co.uk/",
+  "document": "https://dreamrealiserbucket.s3.eu-north-1.amazonaws.com/20230305emb750x450.jpg",
+  "currentProgress": 0.0
+}
+
+
+###
+GET https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events/f07ab0d8-f295-4db9-adbb-ee3486155d69
+Content-Type: application/json
+
+
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/auth/register
+Content-Type: application/json
+
+{
+"email": "dotamira70@gmail.com",
+"password": "StrongPassword2394*"
+}
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/events/bd020d05-aa89-46f9-a9f0-dadc4d783ecd/donate
+Content-Type: application/json
+
+{
+  "paymentMethodId": "pm_card_visa",
+  "email": "dotamira90@gmail.com",
+  "name": "John Doe",
+  "amount": 2000.00
+}
+
+###
+POST https://dewvdtfd5m.execute-api.eu-north-1.amazonaws.com/dev/auth/login
+Content-Type: application/json
+
+{
+"email": "dotamira80@gmail.com",
+"password": "StrongPassword2394*"
+}
+
+###
+POST https://eu-north-1uhcvqq9cg.auth.eu-north-1.amazoncognito.com/oauth2/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&client_id=7f4n0jvd5vp0g8ji7p6ppe4gke&code=14ab7f95-ecc4-4eb0-bf03-93c8bd3351f5&redirect_uri=https://google.com/
