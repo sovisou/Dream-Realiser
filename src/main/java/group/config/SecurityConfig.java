@@ -24,7 +24,9 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/account").authenticated()
+                        .requestMatchers("/account/**").authenticated()
+                        .requestMatchers("/createEvent").authenticated()
+                        .requestMatchers("/authJoin").authenticated()
                         .anyRequest().permitAll()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
@@ -40,7 +42,7 @@ public class SecurityConfig {
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
-
+        configuration.setExposedHeaders(List.of("Content-Type", "X-Amz-Date", "Authorization", "X-Api-Key", "X-Amz-Security-Token"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
@@ -51,5 +53,4 @@ public class SecurityConfig {
         String jwkSetUri = "https://cognito-idp.eu-north-1.amazonaws.com/eu-north-1_uHcVQq9Cg/.well-known/jwks.json";
         return NimbusJwtDecoder.withJwkSetUri(jwkSetUri).build();
     }
-
 }
